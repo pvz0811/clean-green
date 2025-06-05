@@ -88,3 +88,21 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+
+.top-right-logo {
+  position: absolute; /* Or 'fixed' if you want it always visible while scrolling */
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.top-right-logo img {
+  height: 70px;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.top-right-logo img:hover {
+  transform: scale(1.05);
+}
