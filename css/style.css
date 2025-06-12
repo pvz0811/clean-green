@@ -1,222 +1,176 @@
-/* Reset and Base Styles */
+:root {
+  --color-primary: #2F5D38;
+  --color-secondary: #A8D5BA;
+  --color-accent: #E1C699;
+  --color-neutral-light: #F7F7F7;
+  --color-neutral-dark: #333333;
+  --color-gray: #BBBBBB;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
   line-height: 1.6;
-  background-color: #b1e8cd;
-  color: #333;
 }
 
-/* Header */
 header {
-  background-color: #4CAF50;
-  padding: 0 20px;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 20px 0;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 120px;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .site-logo {
-  height: 100px;
-  width: auto;
-}
-
-.header-text {
-  text-align: center;
-  color: white;
+  height: 80px;
 }
 
 .header-text h1 {
-  margin: 0;
-  font-size: 28px;
-  text-align: center;
+  font-size: 2rem;
 }
 
 .header-text p {
-  margin: 5px 0 0;
-  font-size: 16px;
-  text-align: center;
+  font-size: 1rem;
+  color: var(--color-secondary);
 }
 
-/* Hero Section */
 .hero {
-  background: url('../images/hero-background.jpg') no-repeat center center/cover;
-  padding: 100px 20px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  padding: 60px 20px;
+  background-color: var(--color-secondary);
 }
 
 .hero h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: var(--color-primary);
 }
 
 .cta-button {
   display: inline-block;
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 25px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 18px;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #45a049;
+  background-color: var(--color-accent);
+  color: #000;
 }
 
-/* Services Section */
 .services {
-  padding: 60px 20px;
-  background-color: #b8e9bc;
+  padding: 50px 20px;
+  background-color: #fff;
   text-align: center;
 }
 
 .services h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  color: var(--color-primary);
 }
 
 .service-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: #F7F7F7;
-  padding: 20px;
-  width: 300px;
+  background-color: var(--color-neutral-light);
+  border: 1px solid var(--color-gray);
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
+  color: var(--color-primary);
   margin-bottom: 10px;
-  color: #4CAF50;
 }
 
-.card p {
-  font-size: 16px;
-}
-
-/* About Section */
 .about {
-  padding: 60px 20px;
-  background-color: #e8f5e9;
+  padding: 50px 20px;
+  background-color: var(--color-secondary);
   text-align: center;
 }
 
 .about h2 {
-  font-size: 32px;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
 .about p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: auto;
 }
 
-/* Contact Section */
 .contact {
-  padding: 60px 20px;
+  padding: 50px 20px;
   background-color: #fff;
   text-align: center;
 }
 
 .contact h2 {
-  font-size: 32px;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
 form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-form input,
-form textarea {
-  width: 100%;
+input, textarea {
   padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 25px;
-  border: none;
+  border: 1px solid var(--color-gray);
   border-radius: 5px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
   cursor: pointer;
-  font-size: 16px;
+  border-radius: 5px;
 }
 
-form button:hover {
-  background-color: #45a049;
+button[type="submit"]:hover {
+  background-color: var(--color-accent);
+  color: #000;
 }
 
-form p {
-  margin-top: 15px;
-  font-size: 16px;
-}
-
-form a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-form a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--color-primary);
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 15px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 20px 0;
-  }
 
-  .header-text {
-    text-align: left;
-    margin-top: 10px;
-  }
+  
 
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .cta-button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-}
