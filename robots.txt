@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://cleangreenl5.com/sitemap.xml
